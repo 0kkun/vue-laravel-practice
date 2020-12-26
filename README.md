@@ -56,3 +56,13 @@ make work
 ```
 composer require jenssegers/agent
 ```
+
+## デプロイ先
+
+- コマンド
+```
+git subtree push --prefix server/ heroku master
+```
+
+- 参考記事
+> https://qiita.com/rope19181/items/07d556715a3a4f6191bd
