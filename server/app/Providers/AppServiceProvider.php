@@ -29,8 +29,8 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
 
         // アプリをhttpsに対応させる。本番環境の場合にhttpsを強制する
-        if (\App::environment('production')) {
-            \URL::forceScheme('https');
-        }
+        // if (\App::environment('production')) {
+        //     \URL::forceScheme('https');
+        // }
     }
 }
