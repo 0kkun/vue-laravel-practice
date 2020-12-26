@@ -39,4 +39,5 @@ RUN npm install npm@latest -g
 
 WORKDIR /var/www
 
+RUN composer require jenssegers/agent
 RUN composer global require "laravel/installer"
