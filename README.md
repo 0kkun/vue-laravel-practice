@@ -49,3 +49,10 @@ APP_URL=http://localhost:8000
 ```
 make work
 ```
+
+
+## 導入したライブラリ
+
+```
+composer require jenssegers/agent
+```
