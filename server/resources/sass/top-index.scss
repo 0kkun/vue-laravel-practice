@@ -1,0 +1,20 @@
+
+button.action-btn {
+    display: block;
+    height: 100px;
+    width: 100%;
+    font-size: 1.4em;
+    background-color: rgb(99, 224, 249);
+    border-style: none;
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;
+    /* 角丸の指定 */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+button.action-btn:hover {
+    /* 透明度を20%に指定 */
+    opacity: 0.8;
+}
