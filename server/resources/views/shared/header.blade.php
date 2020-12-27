@@ -2,12 +2,12 @@
     <div class="row">
 
         <div class="col-sm-6">
-            <p class="text-left h3">Vue Laravel Practice</p>
+            <a href="/" class="text-left h3">Vue Laravel Practice</a>
         </div>
 
         <div class="col-sm-6">
             @if(Auth::check())
-                <p class="text-right h4">ログインしてます</p>
+                <p class="text-right h4">{{ Auth::user()->name }}でログイン中</p>
             @else
                 <div class="text-right h5">
                     <div><a href="{{ route('login') }}">Login</a></div>
