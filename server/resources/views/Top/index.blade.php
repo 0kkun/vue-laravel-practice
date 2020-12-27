@@ -8,5 +8,4 @@
             {{ $devise_judge }}
         </div>
     </div>
-
 @endsection
