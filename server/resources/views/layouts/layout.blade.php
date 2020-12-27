@@ -15,7 +15,6 @@
             @yield('content')
         </main>
 
-        @include('shared.footer')
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>
