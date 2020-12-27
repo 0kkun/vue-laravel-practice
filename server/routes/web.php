@@ -14,5 +14,3 @@
 Auth::routes();
 
 Route::get('/', 'TopController@index')->name('top.index');
-
-Route::get('/home', 'HomeController@index')->name('home');
