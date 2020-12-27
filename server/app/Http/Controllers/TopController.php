@@ -11,6 +11,6 @@ class TopController extends Controller
     {
         Agent::isMobile() ? $devise_judge = 'mobile' : $devise_judge = 'PC';
 
-        return view('top/index', compact('devise_judge'));
+        return view('Top/index', compact('devise_judge'));
     }
 }
