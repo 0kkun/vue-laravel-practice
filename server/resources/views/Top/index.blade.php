@@ -1,14 +1,12 @@
-<!doctype html>
-<html lang="ja">
-    <head>
-        <title>vue-laravel-tutrial</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    </head>
+@extends('layouts.layout')
 
-    <body>
-        Hello World!
-        {{ $devise_judge }}
-    </body>
+@section('content')
 
-</html>
+    <div class="container">
+        <div class="row justify-content-center">
+            Hello World!
+            {{ $devise_judge }}
+        </div>
+    </div>
+
+@endsection
