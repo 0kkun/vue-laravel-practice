@@ -12,6 +12,6 @@ class ActionTemplateTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(ActionTemplate::class, 1)->create();
+        factory(ActionTemplate::class, 30)->create();
     }
 }
