@@ -8,6 +8,10 @@ class ActionTemplate extends Model
 {
     protected $table = 'action_templates';
 
+    public $timestamps = true;
+
+    protected $guarded = array('id');
+
     protected $fillable = [
         'content',
         'updated_at',
