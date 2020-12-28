@@ -13,26 +13,16 @@
                         <button class="action-btn m-3">空調を適度にOFFにする</button>
                         <button class="action-btn m-3">換気をする</button>
                         <button class="action-btn m-3">湿度を一定に保つ</button>
+                        <div>
+                            
+                        </div>
                     </div>
                     <div class="col-sm-4 p-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">活動回数</h5>
-                                <p class="card-text">0 回</p>
-                            </div>
-                        </div>
-                        <div class="card mt-3">
-                            <div class="card-body">
-                                <h5 class="card-title">活動回数</h5>
-                                <p class="card-text">0 回</p>
-                            </div>
-                        </div>
-                        <div class="card mt-3">
-                            <div class="card-body">
-                                <h5 class="card-title">活動回数</h5>
-                                <p class="card-text">0 回</p>
-                            </div>
-                        </div>
+
+                        <action-count-component></action-count-component>
+                        <action-count-component></action-count-component>
+                        <action-count-component></action-count-component>
+
                     </div>
                 </div>
             </div>
