@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UsersAction extends Model
 {
-    protected $table = 'users_action';
+    protected $table = 'users_actions';
 
     public $timestamps = true;
 

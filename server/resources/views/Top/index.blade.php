@@ -8,20 +8,12 @@
 
         <div class="row">
             <div class="col-sm-8">
-                <div class="m-3" style="display: flex;">
-                    <button class="action-btn">空調を適度にOFFにする</button>
-                    <action-count-component></action-count-component>
-                </div>
-
-                <div class="m-3" style="display: flex">
-                    <button class="action-btn">換気をする</button>
-                    <action-count-component></action-count-component>
-                </div>
-
-                <div class="m-3" style="display: flex">
-                    <button class="action-btn">湿度を一定に保つ</button>
-                    <action-count-component></action-count-component>
-                </div>
+                @foreach ( $actions as $action )
+                    <div class="m-3" style="display: flex;">
+                        <button class="action-btn">{{ $action['content'] }}</button>
+                        <action-count-component></action-count-component>
+                    </div>
+                @endforeach
             </div>
 
             <div class="col-sm-4">
