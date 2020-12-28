@@ -1,5 +1,5 @@
 <template>
-    <div class="card mb-2">
+    <div class="card ml-3">
         <div class="card-body">
             <h5 class="card-title text-center">活動回数</h5>
             <div class="card-text">

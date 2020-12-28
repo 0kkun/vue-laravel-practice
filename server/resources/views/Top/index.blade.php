@@ -8,22 +8,19 @@
 
         <div class="row">
             <div class="col-sm-8">
-                <div class="row">
-                    <div class="col-sm-8">
-                        <button class="action-btn m-3">空調を適度にOFFにする</button>
-                        <button class="action-btn m-3">換気をする</button>
-                        <button class="action-btn m-3">湿度を一定に保つ</button>
-                        <div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-sm-4 p-3">
+                <div class="m-3" style="display: flex;">
+                    <button class="action-btn">空調を適度にOFFにする</button>
+                    <action-count-component></action-count-component>
+                </div>
 
-                        <action-count-component></action-count-component>
-                        <action-count-component></action-count-component>
-                        <action-count-component></action-count-component>
+                <div class="m-3" style="display: flex">
+                    <button class="action-btn">換気をする</button>
+                    <action-count-component></action-count-component>
+                </div>
 
-                    </div>
+                <div class="m-3" style="display: flex">
+                    <button class="action-btn">湿度を一定に保つ</button>
+                    <action-count-component></action-count-component>
                 </div>
             </div>
 
