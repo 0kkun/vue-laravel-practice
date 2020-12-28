@@ -2,6 +2,7 @@
 
 use App\Models\ActionTemplate;
 use Illuminate\Database\Seeder;
+use Faker\Factory;
 
 class ActionTemplateTableSeeder extends Seeder
 {

@@ -4,6 +4,7 @@ use App\Models\ActionTemplate;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Faker\Factory;
 
 class UsersActionTableSeeder extends Seeder
 {
