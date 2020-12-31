@@ -65,6 +65,14 @@
                             </div>
                         </div>
                     </form>
+
+                    <form class="text-center" method="post" action="{{ route('login.guest') }}">
+                        @csrf
+                        <input type="hidden"  name="email" value="guest@gmail.com">
+                        <input type="hidden"  name="password" value="password">
+                        <button type="submit" class="btn btn-warning">簡単ログイン</button>
+                    </form>
+
                 </div>
             </div>
         </div>

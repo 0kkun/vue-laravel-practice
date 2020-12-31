@@ -14,3 +14,5 @@
 Auth::routes();
 
 Route::get('/', 'TopController@index')->name('top.index');
+
+Route::post('login/guest', 'Auth\LoginController@guestLogin')->name('login.guest');
