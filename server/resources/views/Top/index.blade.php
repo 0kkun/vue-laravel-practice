@@ -3,17 +3,20 @@
 @section('content')
 
     <div class="container">
-
-        <div class="bg-dark text-center text-white h5">You access from {{ $devise_judge }} !</div>
+        @if (!empty($devise_judge))
+            <div class="bg-dark text-center text-white h5">You access from {{ $devise_judge }} !</div>
+        @endif
 
         <div class="row">
             <div class="col-sm-8">
+                @if  (!empty($actions))
                 @foreach ( $actions as $action )
                     <div class="m-3" style="display: flex;">
                         <button class="action-btn">{{ $action['content'] }}</button>
                         <action-count-component></action-count-component>
                     </div>
                 @endforeach
+                @endif
             </div>
 
             <div class="col-sm-4">
