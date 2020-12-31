@@ -64,5 +64,10 @@ composer require jenssegers/agent
 git subtree push --prefix server/ heroku master
 ```
 
+- Herokuに導入
+```
+heroku run composer require fzaninotto/faker
+```
+
 - 参考記事
 > https://qiita.com/rope19181/items/07d556715a3a4f6191bd
