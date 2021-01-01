@@ -8,6 +8,7 @@ class Kernel extends HttpKernel
 {
     /**
      * The application's global HTTP middleware stack.
+     * アプリケーションの全HTTPリクエストで実行したいミドルウェアを書く
      *
      * These middleware are run during every request to your application.
      *
@@ -44,7 +45,9 @@ class Kernel extends HttpKernel
     ];
 
     /**
-     * The application's route middleware.
+     * 特定のルートのみに対しミドルウェアを指定したい場合
+     * 短縮キーを指定して通したいミドルウェアを書
+     * ミドルウェアを個々に登録
      *
      * These middleware may be assigned to groups or used individually.
      *
@@ -60,10 +63,13 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'detectSmartPhone' => \App\Http\Middleware\DetectSmartPhone::class,
     ];
 
     /**
      * The priority-sorted list of middleware.
+     * グローバルミドルウェアではないものを記載する。
+     * $middlewareGroupsや$routeMiddlewareに登録したもので最優先にしたいものをこちらにも書いておく
      *
      * This forces non-global middleware to always be in the given order.
      *
