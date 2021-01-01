@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Agent;
+use Jenssegers\Agent\Facades\Agent;
 use App\Models\ActionTemplate;
 use App\Models\UsersAction;
 use Illuminate\Support\Facades\Auth;
