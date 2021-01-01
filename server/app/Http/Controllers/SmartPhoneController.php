@@ -8,6 +8,6 @@ class SmartPhoneController extends Controller
 {
     public function index()
     {
-        return view ( 'Phone.index' );
+        return view ( 'phone.index' );
     }
 }
