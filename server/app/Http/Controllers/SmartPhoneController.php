@@ -3,11 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Facades\Agent;
 
 class SmartPhoneController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
-        return view ( 'phone.index' );
+        Agent::isMobile() ? $devise_judge = 'mobile' : $devise_judge = 'PC';
+
+        return view ( 'phone.index' , compact('devise_judge') );
     }
 }
