@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Jenssegers\Agent\Facades\Agent;
 
-class SmartPhoneController extends Controller
+class MobileController extends Controller
 {
     /**
      * Create a new controller instance.
