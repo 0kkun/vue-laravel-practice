@@ -22,6 +22,6 @@ class SmartPhoneController extends Controller
     {
         Agent::isMobile() ? $devise_judge = 'mobile' : $devise_judge = 'PC';
 
-        return view ( 'phone.index' , compact('devise_judge') );
+        return view ( 'mobile.index' , compact('devise_judge') );
     }
 }

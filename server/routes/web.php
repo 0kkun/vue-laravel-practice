@@ -13,8 +13,8 @@
 
 Auth::routes();
 
-Route::get('/', 'TopController@index')->name('top.index')->middleware('detectSmartPhone');
+Route::get('/', 'TopController@index')->name('top.index')->middleware('detectMobile');
 
-Route::get('phone/', 'SmartPhoneController@index')->name('phone.index');
+Route::get('mobile/', 'MobileController@index')->name('mobile.index');
 
 Route::post('login/guest', 'Auth\LoginController@guestLogin')->name('login.guest');

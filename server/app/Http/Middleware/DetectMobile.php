@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Mobile_Detect;
 
-class DetectSmartPhone
+class DetectMobile
 {
     /**
      * Handle an incoming request.
@@ -19,7 +19,7 @@ class DetectSmartPhone
         $detect = new Mobile_Detect();
         // スマホかタブレットからのアクセスならリダイレクト
         if($detect->isMobile() || $detect->isTablet()) {
-            return redirect('/phone');
+            return redirect('/mobile');
         }
         return $next($request);
     }
