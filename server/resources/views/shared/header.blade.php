@@ -23,7 +23,9 @@
             @else
                 <div class="text-right h5">
                     <div><a href="{{ route('login') }}">Login</a></div>
-                    <div class="pt-1"><a href="{{ route('register') }}">Register</a></div>
+                    @if (Route::has('register'))
+                        <div class="pt-1"><a href="{{ route('register') }}">Register</a></div>
+                    @endif
                 </div>
             @endif
         </div>
