@@ -12,6 +12,9 @@
         {{-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script> --}}
 
+        {{-- Fontawesome --}}
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
         <style type="text/css">
             /*初期表示時にテンプレートが一瞬表示されてしまうのを防ぐ*/
             [v-cloak] {
