@@ -27,15 +27,18 @@
                 </div>
             </div>
         </div>
+        <LogoutButton />
     </div>
 </template>
 
 <script>
 import UpButton from '../components/UpButton.vue'
+import LogoutButton from '../components/LogoutButton.vue'
 
 export default {
     components: {
         UpButton,
+        LogoutButton,
     },
 }
 </script>
