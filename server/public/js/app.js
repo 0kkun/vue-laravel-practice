@@ -1832,6 +1832,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -38471,7 +38489,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container-fluid" },
+    { staticClass: "container-fluid font-weight-bold" },
     [_c("UpButton"), _vm._v(" "), _vm._m(0)],
     1
   )
@@ -38482,12 +38500,42 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card" }, [
-      _c("div", { staticClass: "card-title" }, [_vm._v("省エネランキング")]),
+      _c(
+        "div",
+        { staticClass: "card-title bg-primary text-white h2 text-center p-1" },
+        [_vm._v("省エネランキング")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body border-bottom" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "h3 text-left" }, [_vm._v("電力使用量")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "h3 text-right" }, [_vm._v("3位")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "h4 text-right" }, [
+              _vm._v("( 目標比 95% )")
+            ])
+          ])
+        ])
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "card-body" }, [
-        _c("span", [_vm._v("電力使用量  3位")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("活動回数  1位")])
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "h3 text-left" }, [_vm._v("活動回数")])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col" }, [
+            _c("div", { staticClass: "h3 text-right" }, [_vm._v("1位")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "h4 text-right" }, [
+              _vm._v("( 当月 41 回 )")
+            ])
+          ])
+        ])
       ])
     ])
   }
