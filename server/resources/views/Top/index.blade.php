@@ -1,6 +1,10 @@
 @extends('layouts.layout')
 
+@include('shared.header')
+
 @section('content')
+
+<div id="shop-top-web">
 
     <div class="container">
         @if (!empty($devise_judge))
@@ -34,4 +38,5 @@
 
         </div>
     </div>
+</div>
 @endsection
