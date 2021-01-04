@@ -17,10 +17,10 @@ Route::get('/', 'TopController@index')->name('top.index')->middleware('detectMob
 
 // Route::get('mobile/{any?}', 'MobileController@index')->name('mobile.index');
 
-Route::middleware('verified')->group(function() {
-    Route::get('/mobile/{any?}', function() {
-        return view('mobile.index');
-    })->where('any', '.*');
-});
+
+Route::get('/mobile/{any?}', function() {
+    return view('mobile.index');
+})->where('any', '.*');
+
 
 Route::post('login/guest', 'Auth\LoginController@guestLogin')->name('login.guest');
