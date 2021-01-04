@@ -1741,10 +1741,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-var weekDay = ["日", "月", "火", "水", "木", "金", "土"];
-var date = new Date();
-var today = date.getMonth() + 1 + "/" + date.getDate() + " (" + weekDay[date.getDay()] + ") " + date.getHours() + ":" + date.getMinutes();
-
 var toDoubleDigits = function toDoubleDigits(num) {
   num += "";
 
@@ -1756,21 +1752,24 @@ var toDoubleDigits = function toDoubleDigits(num) {
 }; // 日付をYYYY/MM/DD HH:DD:MI:SS形式で取得
 
 
-var yyyymmddhhmiss = function yyyymmddhhmiss() {
+function today() {
+  var weekDay = ["日", "月", "火", "水", "木", "金", "土"];
   var date = new Date();
   var yyyy = date.getFullYear();
   var mm = toDoubleDigits(date.getMonth() + 1);
   var dd = toDoubleDigits(date.getDate());
+  var wd = weekDay[date.getDay()];
   var hh = toDoubleDigits(date.getHours());
   var mi = toDoubleDigits(date.getMinutes());
-  return yyyy + '/' + mm + '/' + dd + ' ' + hh + ':' + mi;
-};
+  return yyyy + '/' + mm + '/' + dd + '(' + wd + ') ' + hh + ':' + mi;
+}
 
+;
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       storeName: '株式会社アイグリッドストア 1号店',
-      today: today,
+      today: today(),
       measurementMonth: 1,
       measurementDate: 1
     };
