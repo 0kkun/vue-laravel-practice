@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Jenssegers\Agent\Facades\Agent;
+use Illuminate\Support\Facades\Auth;
 
 class MobileController extends Controller
 {
