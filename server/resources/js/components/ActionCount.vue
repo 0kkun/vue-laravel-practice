@@ -31,11 +31,7 @@
     export default {
         data : function () {
             return {
-                actionCounts: [
-                    {count: 0},
-                    {count: 5},
-                    {count: 10},
-                ],
+                actionCounts: [],
                 actionTemplates: [
                     {text: 'adfadsfadfaf'},
                     {text: 'adsfsadf'},
@@ -43,10 +39,20 @@
                 ],
             }
         },
+        mounted: function() {
+            this.getActionCounts();
+        },
         methods: {
+            getActionCounts: function() {
+                axios.get('/api/get_action_count')
+                .then( (res) => {
+                    this.actionCounts = res.data;
+                    console.log(this.actionCounts);
+                });
+            },
             increment(index) {
                 this.actionCounts[index].count += 1;
-            }
+            },
         }	
     }
 </script>

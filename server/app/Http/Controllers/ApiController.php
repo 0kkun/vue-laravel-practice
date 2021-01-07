@@ -8,6 +8,12 @@ class ApiController extends Controller
 {
     public function getActionCount()
     {
-        return 100;
+        $action_counts = [
+            1 => ['count'=>100],
+            2 => ['count'=>200],
+            3 => ['count'=>300]
+        ];
+
+        return json_encode($action_counts);
     }
 }

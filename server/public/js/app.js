@@ -1729,13 +1729,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      actionCounts: [{
-        count: 0
-      }, {
-        count: 5
-      }, {
-        count: 10
-      }],
+      actionCounts: [],
       actionTemplates: [{
         text: 'adfadsfadfaf'
       }, {
@@ -1745,7 +1739,18 @@ __webpack_require__.r(__webpack_exports__);
       }]
     };
   },
+  mounted: function mounted() {
+    this.getActionCounts();
+  },
   methods: {
+    getActionCounts: function getActionCounts() {
+      var _this = this;
+
+      axios.get('/api/get_action_count').then(function (res) {
+        _this.actionCounts = res.data;
+        console.log(_this.actionCounts);
+      });
+    },
     increment: function increment(index) {
       this.actionCounts[index].count += 1;
     }
