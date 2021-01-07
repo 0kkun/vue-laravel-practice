@@ -2,7 +2,7 @@
     <div class="pt-2">
         <div class="row">
             <div class="col">
-                <div v-for="template in actionTemplates" :key="template.text">
+                <div v-for="template in actionData" :key="template.text">
                     <div class="card bg-primary mb-3">
                         <div class="card-body text-center card-height">
                             {{ template.text }}
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col">
-                <div v-for="(actionCount, index) in actionCounts" :key="actionCount.count">
+                <div v-for="(actionCount, index) in actionData" :key="actionCount.count">
                     <div class="card mb-3">
                         <div class="card-body text-center">
                             <h5>活動回数</h5>
@@ -20,8 +20,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -31,27 +29,21 @@
     export default {
         data : function () {
             return {
-                actionCounts: [],
-                actionTemplates: [
-                    {text: 'adfadsfadfaf'},
-                    {text: 'adsfsadf'},
-                    {text: 'aaaaaaaa'},
-                ],
+                actionData: [],
             }
         },
         mounted: function() {
-            this.getActionCounts();
+            this.getActionData();
         },
         methods: {
-            getActionCounts: function() {
-                axios.get('/api/get_action_count')
+            getActionData: function() {
+                axios.get('/api/get_action_data')
                 .then( (res) => {
-                    this.actionCounts = res.data;
-                    console.log(this.actionCounts);
+                    this.actionData = res.data;
                 });
             },
             increment(index) {
-                this.actionCounts[index].count += 1;
+                this.actionData[index].count += 1;
             },
         }	
     }

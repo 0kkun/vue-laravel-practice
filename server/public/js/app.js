@@ -1724,35 +1724,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      actionCounts: [],
-      actionTemplates: [{
-        text: 'adfadsfadfaf'
-      }, {
-        text: 'adsfsadf'
-      }, {
-        text: 'aaaaaaaa'
-      }]
+      actionData: []
     };
   },
   mounted: function mounted() {
-    this.getActionCounts();
+    this.getActionData();
   },
   methods: {
-    getActionCounts: function getActionCounts() {
+    getActionData: function getActionData() {
       var _this = this;
 
-      axios.get('/api/get_action_count').then(function (res) {
-        _this.actionCounts = res.data;
-        console.log(_this.actionCounts);
+      axios.get('/api/get_action_data').then(function (res) {
+        _this.actionData = res.data;
       });
     },
     increment: function increment(index) {
-      this.actionCounts[index].count += 1;
+      this.actionData[index].count += 1;
     }
   }
 });
@@ -38342,7 +38332,7 @@ var render = function() {
       _c(
         "div",
         { staticClass: "col" },
-        _vm._l(_vm.actionTemplates, function(template) {
+        _vm._l(_vm.actionData, function(template) {
           return _c("div", { key: template.text }, [
             _c("div", { staticClass: "card bg-primary mb-3" }, [
               _c("div", { staticClass: "card-body text-center card-height" }, [
@@ -38361,7 +38351,7 @@ var render = function() {
       _c(
         "div",
         { staticClass: "col" },
-        _vm._l(_vm.actionCounts, function(actionCount, index) {
+        _vm._l(_vm.actionData, function(actionCount, index) {
           return _c("div", { key: actionCount.count }, [
             _c("div", { staticClass: "card mb-3" }, [
               _c("div", { staticClass: "card-body text-center" }, [

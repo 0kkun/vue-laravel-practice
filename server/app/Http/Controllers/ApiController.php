@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
-    public function getActionCount()
+    public function getActionData()
     {
-        $action_counts = [
-            1 => ['count'=>100],
-            2 => ['count'=>200],
-            3 => ['count'=>300]
+        $action_data = [
+            1 => ['count'=>100, 'text' => 'aaaa'],
+            2 => ['count'=>200, 'text' => 'bbbb'],
+            3 => ['count'=>300, 'text' => 'cccc']
         ];
 
-        return json_encode($action_counts);
+        return json_encode($action_data);
     }
 }

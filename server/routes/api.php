@@ -17,4 +17,4 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('/get_action_count', 'ApiController@getActionCount');
+Route::get('/get_action_data', 'ApiController@getActionData');
