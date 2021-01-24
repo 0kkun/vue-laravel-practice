@@ -24,3 +24,6 @@ Route::get('/mobile/{any?}', function() {
 
 
 Route::post('login/guest', 'Auth\LoginController@guestLogin')->name('login.guest');
+
+Route::get('/image', 'ImageController@index')->name('image.index');
+Route::post('/image', 'ImageController@upload')->name('image.upload');
