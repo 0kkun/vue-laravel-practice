@@ -11,8 +11,6 @@
                     <input type="hidden" name="_token" :value="csrf_token">
                 </form>
             </div>
-
-
         </div>
     </div>
 </template>
@@ -22,9 +20,9 @@ var csrf_token = $('meta[name="csrf-token"]').attr('content');
 
 export default {
     data() {
-　　　　return {
-　　　　　　csrf_token: csrf_token
-　　　　}
+        return {
+            csrf_token: csrf_token
+        }
     }
 }
 </script>
